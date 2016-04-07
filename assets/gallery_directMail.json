@@ -1,0 +1,25 @@
+[{
+    "src": "./assets/images/works_gallery/directMail_01.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/directMail_01.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/directMail_02.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/directMail_02.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/directMail_03.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/directMail_03.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/directMail_04.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/directMail_04.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/directMail_05.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/directMail_05.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+} ]

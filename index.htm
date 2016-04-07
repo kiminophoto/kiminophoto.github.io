@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="Kimi,平面設計,網頁設計,CIS識別">
+    <meta name="description" content="">
+    <meta name="author" content="Kimi Image ｜ 君影影象設計公司">
+    <meta name="copyright" content="本網頁著作權為Kimi Image ｜ 君影影象設計公司所有">
+    <title>Kimi Image ｜ 君影影象設計公司</title>
+    <link rel="shortcut icon" href="./assets/images/KIMIWeb-favicon-01.jpg">
+    <link rel="icon" href="./assets/images/KIMIWeb-favicon-01.jpg" type="image/jpg">
+    <meta property="og:url" content="http://www.kimi-image.com/" />
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:site_name" content="Kimi Image ｜ 君影影象設計公司">
+    <meta property="og:title" content="Kimi Image ｜ 君影影象設計公司">
+    <meta property="og:description" content="Kimi,平面設計,網頁設計,CIS識別">
+</head>
+<!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+
+<script src="./assets/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+<link rel="stylesheet" href="./assets/js/owl.carousel.2.0.0-beta.2.4/assets/owl.carousel.css">
+<script src="./assets/js/owl.carousel.2.0.0-beta.2.4/owl.carousel.min.js"></script>
+
+<script type="text/javascript">
+	function bounceDownButton() {
+		// body...
+		$("#down-arrow").animate({top:'480px'},200)
+		.animate({top:'490px'},200).animate({top:'480px'},200).animate({top:'490px'},200)
+	}
+
+	setInterval(bounceDownButton,2000);
+
+	$(document).ready(function(){
+	  $(".owl-carousel").owlCarousel({
+	  		items:1,
+		    loop:true,
+		    margin:0,
+		    nav:false,
+		    autoHeight:false,
+		    autoplay:true,
+			autoplayTimeout:5000,
+			autoplayHoverPause:true
+		});
+	});
+</script>
+<script type="text/javascript">
+	$(function() { // document ready
+			$('#calendar').fullCalendar({
+			lang:'zh-tw',
+			buttonText:{
+				timelineDay:'日',
+				agendaWeek:'週',
+				month:'月',
+				today:'今天'
+			},
+			dayClick: function(date, jsEvent, view) {
+				$('#calendar').fullCalendar( 'gotoDate', date );
+				$('#calendar').fullCalendar( 'changeView', 'timelineDay' );
+		    },
+			googleCalendarApiKey: 'AIzaSyCTyTHsRiRyVEGGkNWSCe4cEKfmciCRlc4',
+			editable: true,
+			aspectRatio: 1.5,
+			scrollTime: '08:00:00',
+			minTime:'08:00:00',
+			maxTime:'23:00:00',
+			eventLimit: true,
+			views: {
+		        month: {
+		            eventLimit: 3 // adjust to 6 only for agendaWeek/agendaDay
+		        }
+		    },
+			header: {
+				left: 'today prev,next',
+				center: 'title',
+				right: 'timelineDay,agendaWeek,month'
+			},
+			defaultView: 'month',
+			resourceAreaWidth: '10%',
+			resourceColumns: [
+				{
+					labelText: 'Room',
+					field: 'title',
+					render: function(resource, el) {
+			            el.css('background-color', resource.eventColor);
+			            el.css('color','gray')
+			        }
+				}
+
+			],
+			resources: [
+
+				{ id: 'b', title: '專業白棚',eventColor:'#DDDDDD'},
+				{ id: 'a', title: '神聖教堂',eventColor:'#FFFFBB'},
+				{ id: 'c', title: '日本和風',eventColor:'#FFB6C1'},
+				{ id: 'e', title: 'LIVE舞台',eventColor:'#CCDDFF'},
+				{ id: 'd', title: '浪漫法國',eventColor:'#AFEEEE'},
+				{ id: 'f', title: '古典歐洲',eventColor:'#D1BBFF'},
+				// { id: 'g', title: '英國工業',eventColor:'green'}
+
+
+			],
+			eventSources: [
+			//白棚、教堂、日式、舞台、法國、歐式
+
+			        { id: '1', googleCalendarId: 'ajql2gn40stu71deknh59ifj5o@group.calendar.google.com', resourceId: 'a' ,textColor:'gray'},
+			        { id: '2', googleCalendarId: 't9r6ipus7an5gg5es60tsdtgn4@group.calendar.google.com', resourceId: 'b' ,textColor:'gray'},
+			        { id: '3', googleCalendarId: 'hf20d1055b0drnsh55uolc57b4@group.calendar.google.com', resourceId: 'c' ,textColor:'gray'},
+			       	{ id: '4', googleCalendarId: 'ruhea6f7vo25rlj8600ocmds5l8@group.calendar.google.com', resourceId: 'd' ,textColor:'gray'},
+			        { id: '5', googleCalendarId: 'chrul81q5a5ubqcktemn29mf4c@group.calendar.google.com', resourceId: 'e' ,textColor:'gray'},
+			        { id: '6', googleCalendarId: '3rs8072cnu58k4tdkbffej68to@group.calendar.google.com', resourceId: 'f' ,textColor:'gray'},
+			        // { id: '7', googleCalendarId: 'vfrum4amjcllr000enh9gcedkg@group.calendar.google.com', resourceId: 'g' }
+			       
+
+		    ],
+		    eventClick: function(event) {
+		        if (event.url) {
+		            // window.open(event.url);
+		            return false;
+		        }
+		    }
+		
+        
+		});
+	
+	});
+</script>
+
+
+<link rel="stylesheet" href="./assets/css/style.css" type="text/css">
+
+
+<!--FullCalendar Scheduler -->
+<link href='./assets/js/fullcalendar/fullcalendar.min.css' rel='stylesheet' />
+<link href='./assets/js/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
+<link href='./assets/js/fullcalendar/scheduler.min.css' rel='stylesheet' />
+<script src='./assets/js/fullcalendar/moment.min.js'></script>
+<script src='./assets/js/fullcalendar/moment-with-locales.min.js'></script>
+<!-- <script src='./assets/js/jquery.min.js'></script> -->
+<script src='./assets/js/fullcalendar/fullcalendar.min.js'></script>
+<script src='./assets/js/fullcalendar/scheduler.min.js'></script>  
+<script src='./assets/js/fullcalendar/gcal.js'></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		//smooth scrolling 
+		$('a.scroll[href^="#"]').on('click',function (e) {
+		    e.preventDefault();
+
+		    var target = this.hash;
+		    var $target = $(target);
+
+		    
+	    	 $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top-159
+		    }, 1500, 'swing', function () {
+		        window.location.hash = target;
+		    });
+		    
+
+		   
+		});
+
+
+		$('a.top').on('click', function(e){
+
+			$('html, body').stop().animate({
+			 'scrollTop': 0
+			}, 2000, 'swing');
+		});
+
+		var stickyOffset = $('#nav').offset().top;
+		$(window).scroll(function(){
+		  
+		  var sticky = $('#nav'),
+		      scroll = $(window).scrollTop();
+
+		  sticky.toggleClass("fixed",scroll >= stickyOffset);
+		  
+		});
+
+	});
+</script>
+
+<link rel="stylesheet" href="./assets/js/lightgallery/src/css/lightgallery.css" type="text/css">
+<script type="text/javascript" src="./assets/js/lightgallery/src/js/lightgallery.js"></script>
+<script type="text/javascript" src="./assets/js/lightgallery/src/js/lg-fullscreen.js"></script>
+<script type="text/javascript" src="./assets/js/lightgallery/src/js/lg-fullscreen.js"></script>
+<script src="./assets/js/lightgallery/src/js/lg-autoplay.js" type="text/javascript"></script>
+<script src="./assets/js/lightgallery/src/js/lg-hash.js" type="text/javascript"></script>
+<script src="./assets/js/lightgallery/src/js/lg-thumbnail.js" type="text/javascript"></script>
+<script src="./assets/js/lightgallery/src/js/lg-zoom.js" type="text/javascript"></script>
+<script src="./assets/js/lightgallery/src/js/lg-pager.js" type="text/javascript"></script>
+<script src="./assets/js/lightgallery/src/js/lg-video.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+			$("#works").on('click', '.works', function() {
+
+			    var className = $(this).attr("class").split(' ')[1];
+			    $.getJSON("./assets/gallery_" + className + ".json", function(data) {
+
+			        $(this).lightGallery({
+			            dynamic: true,
+			            dynamicEl: data
+			        });
+
+			    });
+
+			});
+	});
+</script>
+
+<body>
+	<div id="banner">
+		<div class="owl-carousel">
+		  <div> 
+		  	<img src="./assets/images/banner_2.jpg" alt="">
+		  </div>
+		  <div > 
+		  	<img src="./assets/images/banner_1.jpg" alt="">
+		  </div>
+		   <div style="background-color:#fabcde"> 
+		  	<img src="./assets/images/banner_3.jpg" alt="">
+		  </div>
+		</div>
+		<div id="logo_big"></div>
+		<a href="#webdesign-menu" id="down-arrow" class="webdesign-scroll" style="top:480px;"></a>
+		<div id="nav">
+			<div id="menu">
+				<div id="inner">
+					<a class="LOGO">
+					</a>
+					<ul class="menuItem" 
+						style="display: inline-block;width: 800px;margin: 0 auto;text-align: center;">
+						<li class="about">
+							<a href="#about" class="scroll"><i class="icon"></i>
+							<b>About</b><small>Kimi</small></a>
+						</li>
+
+						<li class="studio">
+							<a href="#studio" class="scroll" ><i class="icon"></i>
+							<b>Studio</b><small>棚景介紹</small></a></li>
+						<li class="booking" ><a href="#booking" class="scroll"><i class="icon"></i>
+							<b>Booking</b><small>攝影棚預約</small></a></li>
+						<li class="works" class="scroll"><a href="#works" class="scroll"><i class="icon"></i>
+							<b>Works</b><small>Kimi作品</small></a></li>
+						<li class="product" class="scroll"><a href="#product" class="scroll"><i class="icon"></i>
+							<b>Product</b><small>獨家品牌</small></a></li>
+						<li class="contact" class="scroll"><a href="#contact" class="scroll"><i class="icon"></i>
+							<b>Contact</b><small>搭訕我們</small></a></li>
+
+						
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	
+
+	<div class="pages">
+		<div class="page" id="about">
+			<div class="about_board"></div>
+			<div class="about_info"></div>
+			<div class="about_icon"></div>
+			<div class="about_slogan"></div>
+		</div>
+		<div class="page" id="studio">
+			<div class="studio_title"></div>
+			<div class="board">
+			</div>
+			<div class="rows">
+				<div class="row1" style="margin-bottom:60px">
+					<ul>
+						<li><a href=""><img src="./assets/images/studio-church.png" alt=""></a></li>
+						<li><a href=""><img src="./assets/images/studio-dance.png" alt=""></a></li>
+						<li><a href=""><img src="./assets/images/studio-franch.png" alt=""></a></li>
+						<li><a href=""><img src="./assets/images/studio-japan.png" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="row2">
+					<ul>
+						<li><a href=""><img src="./assets/images/studio-barocco.png" alt=""></a></li>
+						<li><a href=""><img src="./assets/images/studio-white.png" alt=""></a></li>
+						<li><a href=""><img src="./assets/images/studio-guess.png" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="page" id="booking">
+
+			<div id="booking_suite">
+				<div id="booking_title"></div>
+				<div id="booking_form_title"></div>
+				<div id="booking_system_title"></div>
+				<div id="booking_system_description"></div>
+				<div id="booking_system">
+					<iframe src="https://docs.google.com/forms/d/1R2oi84HNIGIk9ZO3aIy6DqWhBsjQ03k-_6pWfIiUoZ4/viewform?embedded=true" width="760" height="600" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+				</div>
+				<div id="calendar_title"></div>
+				<div id="calendar_description"></div>
+				<div id="calendar_suite"></div>
+				<div id='calendar'></div>
+			</div>
+			
+		</div>
+		<div class="page" id="works">
+			<div class="rows">
+				<div class="row1">
+					<ul>
+						<li><a class="works businessCard" ><img src="./assets/images/works_01.gif" alt=""></a></li>
+						<li><a class="works catalog" ><img src="./assets/images/works_02.gif" alt=""></a></li>
+						<li><a class="works CIS" ><img src="./assets/images/works_03.gif" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="row2">
+					<ul>
+						<li><a class="works directMail" ><img src="./assets/images/works_04.gif" alt=""></a></li>
+						<li><a class="works package" ><img src="./assets/images/works_05.gif" alt=""></a></li>
+						<li><a class="works illustration" ><img src="./assets/images/works_06.gif" alt=""></a></li>
+					</ul>
+				</div>
+				<div class="row3">
+					<ul>
+						<li><a class="works signboard" ><img src="./assets/images/works_07.gif" alt=""></a></li>
+						<li><a class="works photoGraphy" ><img src="./assets/images/works_08.gif" alt=""></a></li>
+						<li><a class="works wedding" ><img src="./assets/images/works_09.gif" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="page" id="product">
+			<div class="product_title"></div>
+			<div class="product_frame">
+				<a href="http://www.facebook.com/SpeceFlight.tw">
+					<img src="../assets/images/product-fix-LINK.png" alt="有人宇宙飛行"/>
+				</a>
+			</div>
+
+		</div>
+		<div class="page" id="contact">
+			<div class="contact_title"></div>
+			<div class="contact_info"></div>
+			<div class="contact_map">
+				<div class="contact_top_deco"></div>
+				<div class="google_map">
+					<iframe width="764" height="450" frameborder="0" style="border:0"
+					src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJCzjYDEQ9aTQRzxdkhdjGU9I&key=AIzaSyBVZliPc1V9ic05s13U3kacYta1Gx-ToqM" allowfullscreen></iframe>
+				</div>
+				<div class="contact_bottom_deco"></div>
+			</div>
+			<div class="contact_bus_info"></div>
+		</div>
+
+		<div id="footer">
+			<div class="end_logo"></div>
+			<div class="end_icon">
+				<ul class="end_icon">
+					<li class="photos"><a href="#photo"><i class="icon photos"></i></a></li>
+					<li class="youtube"><a href="#youtube"><i class="icon youtube"></i></a></li>
+					<li class="mail"><a href="#mail"><i class="icon mail"></i></a></li>
+					<li class="facebook"><a href="https://www.facebook.com/miyaodesign/?fref=ts"><i class="icon facebook"></i></a></li>
+				</ul>
+			</div>
+			<div class="end_special"></div>
+			<div class="end_copyright"></div>
+			<a class="scrollTop top" title="TOP">TOP</a>
+		</div>
+	</div>
+	<!-- <div id="footer">
+		123
+	</div> -->
+	
+	
+</body>

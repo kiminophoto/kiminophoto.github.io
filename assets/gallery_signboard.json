@@ -1,0 +1,25 @@
+[{
+    "src": "./assets/images/works_gallery/signboard_01.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/signboard_01.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/signboard_02.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/signboard_02.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/signboard_03.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/signboard_03.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/signboard_04.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/signboard_04.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/thumb/signboard_05.jpg",
+    "thumb": "./assets/images/works_gallery/signboard_05.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+} ]

@@ -1,0 +1,25 @@
+[{
+    "src": "./assets/images/works_gallery/businessCard_01.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/businessCard_01.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/businessCard_02.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/businessCard_02.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/businessCard_03.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/businessCard_03.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/businessCard_04.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/businessCard_04.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+},
+{
+    "src": "./assets/images/works_gallery/businessCard_05.jpg",
+    "thumb": "./assets/images/works_gallery/thumb/businessCard_05.jpg",
+    "subHtml": "<h4>作品大標</h4><p>作品描述</p>"
+} ]
