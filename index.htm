@@ -133,6 +133,8 @@
 		            // window.open(event.url);
 		            return false;
 		        }
+		    },eventRender: function(event, element) {
+		        element.attr('title', event.title);
 		    }
 		
         
