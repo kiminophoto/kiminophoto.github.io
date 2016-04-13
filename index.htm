@@ -138,22 +138,7 @@
 		            // window.open(event.url);
 		            return false;
 		        }
-		    },eventRender: function(event, element) {
-		        element.attr('title', event.title);
-		    },eventMouseover: function(calEvent,jsEvent) {
-				// xOffset = 10;
-				// yOffset = 30;
-				// $("body").append(calEvent.tooltip);
-				// $("#tooltip")
-				// 	.css("top",(jsEvent.clientY - xOffset) + "px")
-				// 	.css("left",(jsEvent.clientX + yOffset) + "px")
-				// 	.fadeIn("fast");
-				 element.attr('title', event.title);	
-			},
-			eventMouseout: function(calEvent,jsEvent) {
-				// $("#tooltip").remove();	
-			}
-		
+		    }
         
 		});
 	
@@ -242,6 +227,20 @@
 			    });
 
 			});
+
+			$("#studio").on('click', '.studio', function() {
+
+			    var className = $(this).attr("class").split(' ')[1];
+			    $.getJSON("./assets/images/studio/gallery_" + className + ".json", function(data) {
+
+			        $(this).lightGallery({
+			            dynamic: true,
+			            dynamicEl: data
+			        });
+
+			    });
+
+			});
 	});
 </script>
 
@@ -310,17 +309,17 @@
 			<div class="rows">
 				<div class="row1" style="margin-bottom:60px">
 					<ul>
-						<li><a href=""><img src="./assets/images/studio-church.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/images/studio-dance.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/images/studio-franch.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/images/studio-japan.png" alt=""></a></li>
+						<li><a class="studio church" href=""><img src="./assets/images/studio-church.png" alt=""></a></li>
+						<li><a class="studio dance" href=""><img src="./assets/images/studio-dance.png" alt=""></a></li>
+						<li><a class="studio french" href=""><img src="./assets/images/studio-franch.png" alt=""></a></li>
+						<li><a class="studio japanese-style" href=""><img src="./assets/images/studio-japan.png" alt=""></a></li>
 					</ul>
 				</div>
 				<div class="row2">
 					<ul>
-						<li><a href=""><img src="./assets/images/studio-barocco.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/images/studio-white.png" alt=""></a></li>
-						<li><a href=""><img src="./assets/images/studio-renting.png" alt=""></a></li>
+						<li><a class="studio baroque" href=""><img src="./assets/images/studio-barocco.png" alt=""></a></li>
+						<li><a class="studio white" href=""><img src="./assets/images/studio-white.png" alt=""></a></li>
+						<li><a class="studio" href=""><img src="./assets/images/studio-renting.png" alt=""></a></li>
 					</ul>
 				</div>
 			</div>
