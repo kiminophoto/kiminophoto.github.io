@@ -142,7 +142,7 @@
 		    },eventRender: function(event, element, view)
 			{
 			   var now=new moment();
-			   return !event.start.isBefore(now);
+			   return (event.source.googleCalendarId=="kiminophoto@gmail.com")||!event.start.isBefore(now);
 			}
         
 		});
