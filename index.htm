@@ -139,7 +139,11 @@
 		            // window.open(event.url);
 		            return false;
 		        }
-		    }
+		    },eventRender: function(event, element, view)
+			{
+			   var now=new moment();
+			   return !event.start.isBefore(now);
+			}
         
 		});
 	
