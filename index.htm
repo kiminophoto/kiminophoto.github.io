@@ -91,7 +91,7 @@
 				center: 'title',
 				right: 'timelineDay,agendaWeek,month'
 			},
-			defaultView: 'month',
+			defaultView: 'agendaWeek',
 			resourceAreaWidth: '10%',
 			resourceColumns: [
 				{
@@ -108,20 +108,15 @@
 
 				{ id: 'b', title: '專業白棚',eventColor:'#DDDDDD'},
 				{ id: 'a', title: '神聖教堂',eventColor:'#FFFFBB'},
-				{ id: 'c', title: '日本和風',eventColor:'#FFB6C1'},
-				{ id: 'e', title: 'LIVE舞台',eventColor:'#CCDDFF'},
-				{ id: 'd', title: '浪漫法國',eventColor:'#AFEEEE'},
+				{ id: 'c', title: '和風藝館',eventColor:'#FFB6C1'},
+				{ id: 'e', title: '絕唱舞台',eventColor:'#CCDDFF'},
+				{ id: 'd', title: '法蘭蒂芬尼',eventColor:'#AFEEEE'},
 				{ id: 'f', title: '古典歐洲',eventColor:'#D1BBFF'},
 				{ id: 'g', title: 'KiMi 備註',eventColor:'#FF8FC9'},
 				{ id: 'h', title: '國定假日',eventColor:'#FFFFFF'}
-				
-				// { id: 'g', title: '英國工業',eventColor:'green'}
-
 
 			],
 			eventSources: [
-			//白棚、教堂、日式、舞台、法國、歐式
-// #FF8FC9
 					{ id: '1', googleCalendarId: 'kiminophoto@gmail.com', resourceId: 'g' ,textColor:'gray'},
 					{ id: '2', googleCalendarId: 'zh.taiwan#holiday@group.v.calendar.google.com', resourceId: 'h' ,textColor:'gray'},
 			        { id: '3', googleCalendarId: 'ajql2gn40stu71deknh59ifj5o@group.calendar.google.com', resourceId: 'a' ,textColor:'gray'},
@@ -130,8 +125,7 @@
 			       	{ id: '6', googleCalendarId: 'uhea6f7vo25rlj8600ocmds5l8@group.calendar.google.com', resourceId: 'd' ,textColor:'gray'},
 			        { id: '7', googleCalendarId: 'chrul81q5a5ubqcktemn29mf4c@group.calendar.google.com', resourceId: 'e' ,textColor:'gray'},
 			        { id: '8', googleCalendarId: '3rs8072cnu58k4tdkbffej68to@group.calendar.google.com', resourceId: 'f' ,textColor:'gray'},
-			        // { id: '7', googleCalendarId: 'vfrum4amjcllr000enh9gcedkg@group.calendar.google.com', resourceId: 'g' }
-			       // uhea6f7vo25rlj8600ocmds5l8@group.calendar.google.com
+			       
 
 		    ],
 		    eventClick: function(event) {
@@ -139,8 +133,8 @@
 		            // window.open(event.url);
 		            return false;
 		        }
-		    },eventRender: function(event, element, view)
-			{
+		    },
+		    eventRender: function(event, element, view){
 			   var now=new moment();
 			   return (event.source.googleCalendarId=="kiminophoto@gmail.com")||!event.start.isBefore(now);
 			}
